@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container Styles */
+.container {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Greeting Styles */
+#greeting {
+    margin-bottom: 20px;
+}
+
+#greetingText {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+#userName {
+    font-size: 20px;
+    color: #6200ea;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#userName:hover {
+    color: #3700b3;
+}
+
+/* Form Styles */
+#searchForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+}
+
+select, input[type="text"], button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+select, input[type="text"] {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+button {
+    background-color: #6200ea;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+input[type="text"]::placeholder {
+    color: #888;
+}
+
+/* Hidden Element */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    #greeting {
+        font-size: 18px;
+    }
+
+    #userName {
+        font-size: 18px;
+    }
+
+    select, input[type="text"], button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (min-width: 601px) {
+    .container {
+        padding: 20px;
+        width: 100%;
+    }
+}
