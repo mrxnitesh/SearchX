@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Search Engine</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">
@@ -13,13 +14,13 @@
             <input type="text" id="userNameInput" placeholder="Your name" />
             <button onclick="saveUserName()">Save</button>
         </div>
-        
+
         <div id="mainContent" class="main-content hidden">
             <div id="greeting">
-                <span id="greetingText"></span> 
+                <span id="greetingText"></span>
                 <span id="userName"></span>
             </div>
-            
+
             <div id="searchForm">
                 <label for="searchEngine">Select a search engine:</label>
                 <select id="searchEngine">
@@ -46,11 +47,11 @@
                 </select>
                 <br>
                 <label for="query">Enter your search term:</label>
-                <input type="text" id="query" required>
+                <input type="text" id="query" required autocomplete="off">
                 <button type="button" onclick="performSearch()">Search</button>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
