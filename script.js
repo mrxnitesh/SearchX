@@ -116,7 +116,7 @@ function getSearchURL(engine, query) {
         facebook: `https://www.google.com/search?q=site:facebook.com+${encodeURIComponent(query)}`,
         github: `https://github.com/search?q=${encodeURIComponent(query)}`,
         google: `https://www.google.com/search?q=${encodeURIComponent(query)}`,
-        instagram: `https://www.google.com/search?q=site:instagram.com+${encodeURIComponent(`@${query}`)}`,
+        instagram: `https://www.google.com/search?q=site:instagram.com+${encodeURIComponent(query)}`,
         linkedin: `https://www.google.com/search?q=site:linkedin.com+${encodeURIComponent(query)}`,
         mdn: `https://developer.mozilla.org/en-US/search?q=${encodeURIComponent(query)}`,
         pinterest: `https://www.pinterest.com/search/pins/?q=${encodeURIComponent(query)}`,
