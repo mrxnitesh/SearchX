@@ -35,7 +35,8 @@ body {
 }
 
 #userName {
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: bold;
     color: #6200ea;
     cursor: pointer;
     transition: color 0.3s ease;
