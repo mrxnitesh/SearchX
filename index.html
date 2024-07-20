@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Search Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="initialSetup" class="setup-section">
+            <label for="userNameInput">Enter your name:</label>
+            <input type="text" id="userNameInput" placeholder="Your name" />
+            <button onclick="saveUserName()">Save</button>
+        </div>
+        
+        <div id="mainContent" class="main-content hidden">
+            <div id="greeting">
+                <span id="greetingText"></span> 
+                <span id="userName"></span>
+            </div>
+            
+            <div id="searchForm">
+                <label for="searchEngine">Select a search engine:</label>
+                <select id="searchEngine">
+                    <!-- Popular Search Engines -->
+                    <option value="google">Google</option>
+                    <option value="bing">Bing</option>
+                    <option value="yahoo">Yahoo</option>
+                    <option value="duckduckgo">DuckDuckGo</option>
+                    <option value="yandex">Yandex</option>
+                    <option value="baidu">Baidu</option>
+
+                    <!-- Privacy-Focused Search Engines -->
+                    <option value="startpage">Startpage</option>
+                    <option value="qwant">Qwant</option>
+                    <option value="ecosia">Ecosia</option>
+
+                    <!-- Specialized Search Engines -->
+                    <option value="wolframalpha">Wolfram Alpha</option>
+                    <option value="googlescholar">Google Scholar</option>
+                    <option value="pubmed">PubMed</option>
+                    <option value="archive">Internet Archive</option>
+                    <option value="pipl">Pipl</option>
+
+                    <!-- Regional and Niche Search Engines -->
+                    <option value="naver">Naver</option>
+                    <option value="sogou">Sogou</option>
+                    <option value="daum">Daum</option>
+                    <option value="seznam">Seznam</option>
+                    <option value="goo">Goo</option>
+                    <option value="rambler">Rambler</option>
+
+                    <!-- Social Media Search Engines -->
+                    <option value="github">GitHub</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="facebook">Facebook</option>
+
+                    <!-- Vertical Search Engines -->
+                    <option value="indeed">Indeed</option>
+                    <option value="tripadvisor">TripAdvisor</option>
+                    <option value="zillow">Zillow</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="amazon">Amazon</option>
+                </select>
+                <br>
+                <label for="query">Enter your search term:</label>
+                <input type="text" id="query" required>
+                <button type="button" onclick="performSearch()">Search</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
