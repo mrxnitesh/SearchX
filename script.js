@@ -2,7 +2,7 @@ function updateDateTime() {
     const now = new Date();
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const dateTime = now.toLocaleDateString(undefined, options) + ' ' + now.toLocaleTimeString();
-    // You can include this in the HTML if you want to display it
+    // Optional: You can display the date and time if needed
     // document.getElementById('currentDateTime').textContent = dateTime;
 }
 
@@ -41,89 +41,62 @@ function performSearch() {
     let url = '';
 
     switch (searchEngine) {
-        case 'google':
-            url = 'https://www.google.com/search?q=' + encodeURIComponent(query);
-            break;
-        case 'bing':
-            url = 'https://www.bing.com/search?q=' + encodeURIComponent(query);
-            break;
-        case 'yahoo':
-            url = 'https://search.yahoo.com/search?p=' + encodeURIComponent(query);
-            break;
-        case 'duckduckgo':
-            url = 'https://duckduckgo.com/?q=' + encodeURIComponent(query);
-            break;
-        case 'yandex':
-            url = 'https://yandex.com/search/?text=' + encodeURIComponent(query);
+        case 'amazon':
+            url = 'https://www.amazon.com/s?k=' + encodeURIComponent(query);
             break;
         case 'baidu':
             url = 'https://www.baidu.com/s?wd=' + encodeURIComponent(query);
             break;
-        case 'startpage':
-            url = 'https://www.startpage.com/sp/search?q=' + encodeURIComponent(query);
+        case 'bing':
+            url = 'https://www.bing.com/search?q=' + encodeURIComponent(query);
             break;
-        case 'qwant':
-            url = 'https://www.qwant.com/?q=' + encodeURIComponent(query);
+        case 'duckduckgo':
+            url = 'https://duckduckgo.com/?q=' + encodeURIComponent(query);
             break;
         case 'ecosia':
             url = 'https://www.ecosia.org/search?q=' + encodeURIComponent(query);
             break;
-        case 'wolframalpha':
-            url = 'https://www.wolframalpha.com/input/?i=' + encodeURIComponent(query);
-            break;
-        case 'googlescholar':
-            url = 'https://scholar.google.com/scholar?q=' + encodeURIComponent(query);
-            break;
-        case 'pubmed':
-            url = 'https://pubmed.ncbi.nlm.nih.gov/?term=' + encodeURIComponent(query);
-            break;
-        case 'archive':
-            url = 'https://archive.org/search.php?query=' + encodeURIComponent(query);
-            break;
-        case 'pipl':
-            url = 'https://pipl.com/search/?q=' + encodeURIComponent(query);
-            break;
-        case 'naver':
-            url = 'https://search.naver.com/search.naver?query=' + encodeURIComponent(query);
-            break;
-        case 'sogou':
-            url = 'https://www.sogou.com/web?query=' + encodeURIComponent(query);
-            break;
-        case 'daum':
-            url = 'https://search.daum.net/search?q=' + encodeURIComponent(query);
-            break;
-        case 'seznam':
-            url = 'https://search.seznam.cz/?q=' + encodeURIComponent(query);
-            break;
-        case 'goo':
-            url = 'https://www.goo.ne.jp/search.jsp?MT=' + encodeURIComponent(query);
-            break;
-        case 'rambler':
-            url = 'https://www.rambler.ru/search/?query=' + encodeURIComponent(query);
+        case 'facebook':
+            url = 'https://www.google.com/search?q=site:facebook.com+' + encodeURIComponent(query);
             break;
         case 'github':
             url = 'https://github.com/search?q=' + encodeURIComponent(query);
             break;
+        case 'google':
+            url = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            break;
         case 'instagram':
-            url = 'https://www.instagram.com/explore/tags/' + encodeURIComponent(query) + '/';
+            url = 'https://www.google.com/search?q=site:instagram.com+' + encodeURIComponent(query);
             break;
-        case 'facebook':
-            url = 'https://www.facebook.com/search/top?q=' + encodeURIComponent(query);
+        case 'linkedin':
+            url = 'https://www.google.com/search?q=site:linkedin.com+' + encodeURIComponent(query);
             break;
-        case 'indeed':
-            url = 'https://www.indeed.com/q-' + encodeURIComponent(query) + '-jobs.html';
+        case 'mdn':
+            url = 'https://developer.mozilla.org/en-US/search?q=' + encodeURIComponent(query);
             break;
-        case 'tripadvisor':
-            url = 'https://www.tripadvisor.com/Search?q=' + encodeURIComponent(query);
+        case 'pinterest':
+            url = 'https://www.pinterest.com/search/pins/?q=' + encodeURIComponent(query);
             break;
-        case 'zillow':
-            url = 'https://www.zillow.com/homes/' + encodeURIComponent(query);
+        case 'pixabay':
+            url = 'https://pixabay.com/images/search/' + encodeURIComponent(query) + '/';
+            break;
+        case 'quora':
+            url = 'https://www.google.com/search?q=site:quora.com+' + encodeURIComponent(query);
+            break;
+        case 'reddit':
+            url = 'https://www.reddit.com/search/?q=' + encodeURIComponent(query);
+            break;
+        case 'stackoverflow':
+            url = 'https://stackoverflow.com/search?q=' + encodeURIComponent(query);
+            break;
+        case 'twitter':
+            url = 'https://twitter.com/search?q=' + encodeURIComponent(query);
+            break;
+        case 'w3schools':
+            url = 'https://www.google.com/search?q=site:w3schools.com+' + encodeURIComponent(query);
             break;
         case 'youtube':
             url = 'https://www.youtube.com/results?search_query=' + encodeURIComponent(query);
-            break;
-        case 'amazon':
-            url = 'https://www.amazon.com/s?k=' + encodeURIComponent(query);
             break;
         default:
             alert('Search engine not supported');
@@ -132,6 +105,15 @@ function performSearch() {
 
     window.location.href = url;
 }
+
+
+
+// Handle Enter key press for search
+document.getElementById('query').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        performSearch();
+    }
+});
 
 // Initial setup
 document.addEventListener('DOMContentLoaded', () => {
